@@ -2,78 +2,68 @@
 layout: default
 title: "Accueil"
 meta_title: "Peintre en bâtiment à Annecy et Cruseilles | Lugaz & Fils"
-description: "Lugaz & Fils, artisan peintre en Haute-Savoie depuis 1995 : peinture intérieure, façades, plâtrerie, sols. Devis gratuit à Annecy, Cruseilles, Genevois et canton de Genève."
+description: "Lugaz & Fils, entreprise de peinture en Haute-Savoie depuis 1995 : peinture intérieure, ravalement de façade, ITE, plâtrerie, sols. Devis gratuit à Annecy, Cruseilles, Genevois et canton de Genève."
 ---
 <section class="hero">
-  <div class="wrap">
-    <div>
-      <p class="eyebrow">Artisan peintre depuis {{ site.data.site.founded }}</p>
-      <h1>Artisan peintre en Haute-Savoie : intérieur, façades, rénovation</h1>
-      <p class="lead">Entreprise familiale installée à Copponex, Lugaz &amp; Fils rénove et embellit vos intérieurs et vos façades à Annecy, dans le Genevois, en Savoie et dans le canton de Genève. Un conseil honnête, un devis détaillé, un chantier propre.</p>
-      <div class="btns"><a class="btn btn-p" href="{{ '/nous-contacter.html' | relative_url }}">Demander un devis gratuit</a><a class="btn btn-g" href="tel:{{ site.data.site.phone_e164 }}">{{ site.data.site.phone }}</a></div>
-    </div>
-    <div class="pic" style="--ar:4/3">{% include img.html name="accueil-hero" alt="Peintre en bâtiment Lugaz & Fils au travail sur un chantier en Haute-Savoie" ratio="4/3" eager=true sizes="(min-width:980px) 560px, 100vw" %}</div>
+  <div class="hero-t">
+    <h1>Peinture, façades et plâtrerie en Haute-Savoie</h1>
+    <p class="lead">Lugaz &amp; Fils réalise les travaux de peinture, de ravalement et de plâtrerie des particuliers, des copropriétés et des entreprises, d'Annecy au canton de Genève, depuis Copponex.</p>
+    <div class="btns"><a class="btn btn-p" href="{{ '/nous-contacter.html' | relative_url }}">Demander un devis gratuit</a><a class="btn btn-g" href="tel:{{ site.data.site.phone_e164 }}">{{ site.data.site.phone }}</a></div>
+    <p class="hero-facts"><span>Depuis {{ site.data.site.founded }}</span><span>Qualibat RGE</span><span>Google {{ site.data.site.google_rating }}/5, {{ site.data.site.google_reviews_count }} avis</span></p>
   </div>
-</section>
-
-<section class="trust" aria-label="Nos repères">
-  <div class="wrap">
-    <ul>
-      <li><strong>Depuis {{ site.data.site.founded }}</strong><span>Entreprise familiale, deux générations</span></li>
-      <li><strong>Qualibat RGE</strong><span>Savoir-faire reconnu</span></li>
-      <li><strong>{{ site.data.site.google_rating }} / 5</strong><span>{{ site.data.site.google_reviews_count }} avis Google</span></li>
-      <li><strong>Devis gratuit</strong><span>Réponse en moins d'une semaine</span></li>
-    </ul>
-  </div>
+  <div class="pic">{% include img.html name="accueil-hero" alt="Peintre en bâtiment Lugaz & Fils au travail sur un chantier en Haute-Savoie" ratio="4/3" eager=true sizes="(min-width:980px) 45vw, 100vw" %}</div>
 </section>
 
 <section class="sec">
   <div class="wrap">
-    <div class="sec-h"><p class="eyebrow">Nos prestations</p><h2>Du support au dernier coup de pinceau</h2><p>Trois univers d'intervention, une même exigence de préparation et de finition.</p></div>
-    <div class="grid c3">
-      {%- for f in site.data.families %}
-      <div class="fam">
-        <h3><a href="{{ f.url | relative_url }}" style="color:inherit;text-decoration:none">{{ f.name }}</a></h3>
-        <ul>{% for s in site.data.services %}{% if s.family == f.key %}<li><a href="{{ s.url | relative_url }}">{{ s.name }}</a></li>{% endif %}{% endfor %}</ul>
+    {%- for f in site.data.families %}
+    <div class="fam-block split">
+      <div>
+        <h2><a href="{{ f.url | relative_url }}" style="color:inherit;text-decoration:none">{{ f.name }}</a></h2>
       </div>
-      {%- endfor %}
+      <div class="idx">
+        {%- for s in site.data.services %}{% if s.family == f.key %}
+        <a class="row" href="{{ s.url | relative_url }}"><span class="nm">{{ s.name }}</span><span class="ds">{{ s.short }}</span></a>
+        {%- endif %}{% endfor %}
+      </div>
     </div>
+    {%- endfor %}
   </div>
 </section>
 
 <section class="sec alt">
-  <div class="wrap">
-    <div class="sec-h"><p class="eyebrow">Notre méthode</p><h2>Un accompagnement du premier échange à la livraison</h2></div>
-    <ol class="steps">
-      <li><h3>Écoute</h3><p>Nous prenons le temps de comprendre votre projet, vos contraintes et votre budget.</p></li>
-      <li><h3>Conseil</h3><p>Choix des matériaux et des finitions adaptés à votre support et à votre usage.</p></li>
-      <li><h3>Devis personnalisé</h3><p>Un devis gratuit, clair et détaillé, remis en moins d'une semaine.</p></li>
-      <li><h3>Chantier soigné</h3><p>Protection des lieux, préparation rigoureuse, équipe expérimentée.</p></li>
-      <li><h3>Livraison et retouches</h3><p>Réception avec vous et reprise de chaque détail si nécessaire.</p></li>
-    </ol>
-    <div class="btns"><a class="btn btn-g" href="{{ '/notre-accompagnement.html' | relative_url }}">Voir notre accompagnement</a></div>
+  <div class="wrap split">
+    <h2>Un chantier, de la visite à la réception</h2>
+    <dl class="defs">
+      <div><dt>Visite et conseil</dt><dd>Nous visitons le site, relevons les supports et vous orientons vers les produits et finitions adaptés à l'usage et à l'exposition.</dd></div>
+      <div><dt>Devis détaillé</dt><dd>Surfaces, produits, préparation et délais sont chiffrés ligne par ligne. Le devis est gratuit et remis en général sous une semaine.</dd></div>
+      <div><dt>Préparation et protection</dt><dd>Sols, menuiseries et mobilier sont protégés avant toute intervention. La préparation des supports représente l'essentiel du temps de chantier.</dd></div>
+      <div><dt>Exécution</dt><dd>Une équipe constituée, un interlocuteur unique et un planning communiqué à l'avance.</dd></div>
+      <div><dt>Réception</dt><dd>Nous parcourons les travaux avec vous et reprenons chaque retouche avant la clôture du chantier.</dd></div>
+    </dl>
   </div>
 </section>
 
 <section class="sec">
-  <div class="wrap two">
+  <div class="wrap split">
+    <div class="pic" style="--ar:4/5">{% include img.html name="accueil-equipe-chantier" alt="Équipe Lugaz & Fils sur un chantier de peinture" ratio="4/5" %}</div>
     <div>
-      <p class="eyebrow">Pourquoi Lugaz &amp; Fils</p>
-      <h2>Une entreprise à taille humaine, un savoir-faire de référence</h2>
-      <p>Fondée en {{ site.data.site.founded }} par Denis Lugaz, rejointe par Maxime en 2017 et reprise en association en 2023, l'entreprise réunit plus de dix collaborateurs en saison. Chaque chantier est suivi de près, de la préparation à la réception.</p>
-      <p>Nous intervenons chez les particuliers comme chez les professionnels, du simple rafraîchissement au projet d'exception.</p>
+      <h2>Une entreprise familiale, des équipes structurées</h2>
+      <p>Fondée en {{ site.data.site.founded }} par Denis Lugaz, rejointe par Maxime en 2017 et reprise en association en 2023, l'entreprise réunit plus de dix collaborateurs en saison. Elle intervient chez les particuliers comme chez les professionnels, du rafraîchissement d'un appartement au ravalement complet d'un immeuble.</p>
+      <p>Qualifiée Qualibat RGE, elle réalise les travaux d'isolation par l'extérieur éligibles aux aides à la rénovation énergétique.</p>
       <div class="btns"><a class="btn btn-g" href="{{ '/qui-sommes-nous.html' | relative_url }}">Qui sommes-nous</a><a class="btn btn-g" href="{{ '/qui-sommes-nous/realisations.html' | relative_url }}">Nos réalisations</a></div>
     </div>
-    <div class="pic" style="--ar:4/3">{% include img.html name="accueil-equipe-chantier" alt="Équipe Lugaz & Fils sur un chantier de peinture" ratio="4/3" %}</div>
   </div>
 </section>
 
 <section class="sec alt">
-  <div class="wrap">
-    <div class="sec-h"><p class="eyebrow">Zone d'intervention</p><h2>Autour de Copponex, et plus loin sur demande</h2></div>
-    <ul class="chips">{% for a in site.data.site.areas %}<li>{{ a }}</li>{% endfor %}</ul>
-    <div class="facts" style="margin-top:30px">
-      <p><span class="kicker">Lugaz &amp; Fils en bref :</span> entreprise de peinture en bâtiment fondée en {{ site.data.site.founded }}, basée au {{ site.data.site.street }}, {{ site.data.site.zip }} {{ site.data.site.city }} ({{ site.data.site.region }}). Peinture intérieure et extérieure, plâtrerie, revêtements de sol et muraux, ravalement et isolation de façades. Ouvert du lundi au samedi, de 7 h 30 à 18 h 00. Devis gratuit.</p>
+  <div class="wrap split">
+    <h2>Zone d'intervention</h2>
+    <div>
+      <p>Nous intervenons autour de Copponex : {{ site.data.site.areas | join: ", " }}. Pour un chantier plus éloigné, contactez-nous : nous étudions chaque demande.</p>
+      <div class="facts">
+        <p><span class="kicker">Lugaz &amp; Fils en bref :</span> entreprise de peinture en bâtiment fondée en {{ site.data.site.founded }}, basée au {{ site.data.site.street }}, {{ site.data.site.zip }} {{ site.data.site.city }} ({{ site.data.site.region }}). Peinture intérieure et extérieure, plâtrerie, revêtements de sol et muraux, ravalement et isolation de façades. Ouvert du lundi au samedi, de 7 h 30 à 18 h 00. Devis gratuit.</p>
+      </div>
     </div>
   </div>
 </section>

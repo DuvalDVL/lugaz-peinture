@@ -6,7 +6,12 @@ description: "Mentions légales du site lugaz-peinture.fr."
 permalink: /mentions-legales.html
 noindex: true
 ---
-<section class="ph-hero"><div class="wrap"><h1>Mentions légales</h1></div></section>
+<section class="hero light plain">
+  <div class="hero-t">
+    
+    <h1 class="sm">Mentions légales</h1>
+  </div>
+</section>
 <section class="sec"><div class="wrap prose">
 <h2>Éditeur du site</h2>
 <p>{{ site.data.site.legal_name }}<br>{{ site.data.site.street }}, {{ site.data.site.zip }} {{ site.data.site.city }}<br>Téléphone : {{ site.data.site.phone }}<br>E-mail : {{ site.data.site.email }}</p>

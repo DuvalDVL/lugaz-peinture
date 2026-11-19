@@ -8,7 +8,6 @@ lead: "Nettoyer, réparer, protéger, embellir : un ravalement bien mené redonn
 image: ravalement-facade-chantier
 image_alt: "Ravalement de façade en cours par Lugaz & Fils en Haute-Savoie"
 image_ratio: "4/5"
-eyebrow: "Façades et extérieur"
 faq:
   - q: "Quand faut-il ravaler une façade ?"
     a: "En général tous les 10 à 15 ans selon l'exposition. Les premiers signes sont l'encrassement, les fissures, les écaillages et les traces de mousse."

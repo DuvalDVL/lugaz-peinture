@@ -8,7 +8,6 @@ lead: "Murs, plafonds, boiseries, escaliers : nous préparons chaque support ava
 image: interieur-salon-peint
 image_alt: "Salon fraîchement repeint par Lugaz & Fils en Haute-Savoie"
 image_ratio: "4/5"
-eyebrow: "Intérieur et décoration"
 faq:
   - q: "Combien de temps dure la peinture d'un appartement ?"
     a: "Pour un appartement de 70 m², comptez en général une à deux semaines selon l'état des supports et le nombre de couches. Le délai précis figure sur le devis."

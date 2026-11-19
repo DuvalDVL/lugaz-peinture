@@ -8,7 +8,6 @@ lead: "Copropriétés, bureaux, commerces, sites industriels : des chantiers pla
 image: entretien-batiments-pro
 image_alt: "Peinture de parties communes d'un immeuble par Lugaz & Fils"
 image_ratio: "4/5"
-eyebrow: "Professionnels"
 faq:
   - q: "Pouvez-vous intervenir en dehors des horaires d'ouverture ?"
     a: "Oui, selon le chantier : soirs, week-ends ou périodes de fermeture, pour limiter la gêne."

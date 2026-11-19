@@ -1,9 +1,9 @@
 {%- assign items = include.items -%}
 {%- if items and items.size > 0 -%}
 <section class="sec" aria-labelledby="faq-t">
-  <div class="wrap">
-    <div class="sec-h"><p class="eyebrow">Questions fréquentes</p><h2 id="faq-t">{{ include.title | default: "Vos questions, nos réponses" }}</h2></div>
-    <div class="faq prose">
+  <div class="wrap split">
+    <h2 id="faq-t">{{ include.title | default: "Questions fréquentes" }}</h2>
+    <div class="faq">
       {%- for q in items %}
       <details><summary>{{ q.q }}</summary><div class="a">{{ q.a }}</div></details>
       {%- endfor %}

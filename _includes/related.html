@@ -1,10 +1,10 @@
 {%- if page.related and page.related.size > 0 -%}
 <section class="sec alt">
-  <div class="wrap">
-    <div class="sec-h"><h2>À voir aussi</h2></div>
-    <div class="grid c3">
+  <div class="wrap split">
+    <h2>À voir aussi</h2>
+    <div class="idx">
       {%- for u in page.related %}{% for s in site.data.services %}{% if s.url == u %}
-      <article class="card"><div class="card-b"><h3><a href="{{ s.url | relative_url }}">{{ s.name }}</a></h3><p>{{ s.short }}</p><span class="more">Découvrir →</span></div></article>
+      <a class="row" href="{{ s.url | relative_url }}"><span class="nm">{{ s.name }}</span><span class="ds">{{ s.short }}</span></a>
       {%- endif %}{% endfor %}{% endfor %}
     </div>
   </div>

@@ -10,23 +10,23 @@ faq:
   - q: "Que se passe-t-il à la réception du chantier ?"
     a: "Nous parcourons ensemble les travaux, listons les éventuelles retouches et les reprenons rapidement."
 ---
-<section class="ph-hero">
-  <div class="wrap">
-    <nav class="crumbs" aria-label="Fil d'Ariane"><ol><li><a href="{{ '/' | relative_url }}">Accueil</a></li><li aria-current="page">Notre accompagnement</li></ol></nav>
-    <p class="eyebrow">Notre accompagnement</p>
-    <h1>Du premier échange à la réception, un interlocuteur unique</h1>
-    <p class="lead">Un chantier serein repose sur une méthode claire. Voici comment nous travaillons.</p>
+<section class="hero light plain">
+  <div class="hero-t">
+    <nav class="crumbs" aria-label="Fil d'Ariane"><ol><li><a href="{{ '/' | relative_url }}">Accueil</a></li><li aria-current="page">Accompagnement</li></ol></nav>
+    <h1 class="sm">Du premier échange à la réception, un interlocuteur unique</h1>
+    <p class="lead">Un chantier maîtrisé repose sur une méthode claire.</p>
   </div>
 </section>
 <section class="sec">
-  <div class="wrap">
-    <ol class="steps">
-      <li><h3>Écoute</h3><p>Nous échangeons sur votre projet, vos contraintes, votre budget et vos délais, au téléphone ou sur place.</p></li>
-      <li><h3>Conseil</h3><p>Nous vous orientons vers les matériaux et les finitions adaptés à votre support et à votre usage.</p></li>
-      <li><h3>Devis personnalisé</h3><p>Un devis gratuit, détaillé et clair, remis en général en moins d'une semaine.</p></li>
-      <li><h3>Chantier soigné</h3><p>Protection des lieux, préparation rigoureuse, équipe expérimentée, nettoyage quotidien.</p></li>
-      <li><h3>Livraison et retouches</h3><p>Réception avec vous et reprise de chaque détail si nécessaire.</p></li>
-    </ol>
+  <div class="wrap split">
+    <h2>Les étapes</h2>
+    <dl class="defs">
+      <div><dt>Écoute</dt><dd>Nous échangeons sur votre projet, vos contraintes, votre budget et vos délais, au téléphone ou sur place.</dd></div>
+      <div><dt>Conseil</dt><dd>Nous vous orientons vers les matériaux et les finitions adaptés à votre support et à votre usage.</dd></div>
+      <div><dt>Devis</dt><dd>Gratuit, détaillé, remis en général en moins d'une semaine.</dd></div>
+      <div><dt>Chantier</dt><dd>Protection des lieux, préparation rigoureuse, équipe expérimentée, nettoyage quotidien.</dd></div>
+      <div><dt>Réception</dt><dd>Revue des travaux avec vous et reprise de chaque détail si nécessaire.</dd></div>
+    </dl>
   </div>
 </section>
 {% include faq.html items=page.faq %}

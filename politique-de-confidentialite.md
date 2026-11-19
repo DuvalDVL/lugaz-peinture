@@ -6,7 +6,12 @@ description: "Données personnelles collectées via le formulaire de contact et 
 permalink: /politique-de-confidentialite.html
 noindex: true
 ---
-<section class="ph-hero"><div class="wrap"><h1>Politique de confidentialité</h1></div></section>
+<section class="hero light plain">
+  <div class="hero-t">
+    
+    <h1 class="sm">Politique de confidentialité</h1>
+  </div>
+</section>
 <section class="sec"><div class="wrap prose">
 <h2>Responsable du traitement</h2>
 <p>{{ site.data.site.legal_name }}, {{ site.data.site.street }}, {{ site.data.site.zip }} {{ site.data.site.city }}. Contact : {{ site.data.site.email }}.</p>
