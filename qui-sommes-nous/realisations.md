@@ -16,9 +16,8 @@ permalink: /qui-sommes-nous/realisations.html
 <section class="sec">
   <div class="wrap">
     <div class="grid c3">
-      {%- assign reals = "realisation-interieur-1|Peinture intérieure d'un séjour|realisation-facade-1|Ravalement de façade d'une maison|realisation-ite-1|Isolation par l'extérieur d'une maison|realisation-chalet-1|Dégrisage et lasure d'un chalet|realisation-sol-1|Pose de parquet|realisation-placo-1|Cloisons et plafonds en placo" | split: "|" -%}
-      {%- for i in (0..5) %}{% assign k = i | times: 2 %}{% assign k2 = k | plus: 1 %}
-      <figure class="card"><div class="pic" style="--ar:4/3">{% include img.html name=reals[k] alt=reals[k2] ratio="4/3" sizes="(min-width:980px) 360px, 100vw" %}</div><figcaption class="card-b"><h3>{{ reals[k2] }}</h3></figcaption></figure>
+      {%- for r in site.data.realisations %}
+      <figure class="card"><div class="pic" style="--ar:4/3">{% include img.html name=r.name alt=r.alt ratio="4/3" sizes="(min-width:980px) 360px, 100vw" %}</div><figcaption class="card-b"><h3>{{ r.alt }}</h3></figcaption></figure>
       {%- endfor %}
     </div>
     <p style="margin-top:28px">Retrouvez plus de chantiers sur notre compte <a href="{{ site.data.site.instagram }}" rel="noopener" target="_blank">Instagram @lugazetfils</a>.</p>
