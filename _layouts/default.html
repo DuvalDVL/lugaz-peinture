@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+{% include head.html %}
+</head>
+<body{% unless site.indexable %} class="preview"{% endunless %}>
+<a class="skip" href="#main">Aller au contenu</a>
+{% include header.html %}
+<main id="main">
+{{ content }}
+</main>
+{% include footer.html %}
+{% include schema-business.html %}
+{% include cookie.html %}
+<script>
+(function(){
+var b=document.querySelector('.menu-btn'),n=document.getElementById('nav');
+if(b&&n){b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)})}
+var f=document.getElementById('quote-form');
+if(f){f.addEventListener('submit',function(e){
+e.preventDefault();
+var ok=true;f.querySelectorAll('[required]').forEach(function(i){if(i.type==='checkbox'?!i.checked:!i.value.trim()){ok=false;i.style.borderColor='#a61b1b'}});
+if(!ok){f.reportValidity&&f.reportValidity();return}
+var s=f.querySelector('button[type=submit]');s.disabled=true;s.textContent='Envoi…';
+fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}}).then(function(r){
+if(r.ok){f.hidden=true;document.getElementById('form-ok').hidden=false;window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'generate_lead'})}
+else throw 0}).catch(function(){document.getElementById('form-err').hidden=false;s.disabled=false;s.textContent='Envoyer ma demande'})
+})}
+})();
+</script>
+</body>
+</html>

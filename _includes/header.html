@@ -1,0 +1,27 @@
+<header class="hdr">
+  <div class="wrap">
+    <a class="logo" href="{{ '/' | relative_url }}" aria-label="Lugaz &amp; Fils, accueil"><img src="{{ '/assets/img/logo-lugaz.webp' | relative_url }}" width="150" height="33" alt="Lugaz &amp; Fils, peintre en bâtiment"></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <ul>
+        <li class="has-sub"><a href="{{ '/nos-services.html' | relative_url }}">Prestations</a>
+          <div class="sub">
+            {%- for f in site.data.families %}
+            <div>
+              <h3>{{ f.name }}</h3>
+              {%- for s in site.data.services %}{% if s.family == f.key %}
+              <a href="{{ s.url | relative_url }}">{{ s.name }}</a>
+              {%- endif %}{% endfor %}
+            </div>
+            {%- endfor %}
+          </div>
+        </li>
+        <li><a href="{{ '/qui-sommes-nous.html' | relative_url }}">Qui sommes-nous</a></li>
+        <li><a href="{{ '/qui-sommes-nous/realisations.html' | relative_url }}">Réalisations</a></li>
+        <li><a href="{{ '/notre-accompagnement.html' | relative_url }}">Notre accompagnement</a></li>
+        <li><a href="{{ '/f-a-q.html' | relative_url }}">FAQ</a></li>
+        <li><a class="btn btn-p" href="{{ '/nous-contacter.html' | relative_url }}">Demander un devis</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

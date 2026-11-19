@@ -1,0 +1,16 @@
+{%- if site.data.site.ga4 != "" -%}
+<div id="cookie-bar" role="dialog" aria-label="Cookies" hidden style="position:fixed;left:12px;right:12px;bottom:12px;z-index:80;background:#14181b;color:#fff;padding:16px 18px;border-radius:12px;font-size:.9rem;box-shadow:0 10px 30px rgba(0,0,0,.35);max-width:560px">
+  <p style="margin:0 0 12px">Nous utilisons Google Analytics pour mesurer l'audience du site, uniquement avec votre accord. <a href="{{ '/politique-de-confidentialite.html' | relative_url }}" style="color:#9fd36b">En savoir plus</a></p>
+  <div style="display:flex;gap:8px"><button type="button" class="btn btn-p" data-c="granted" style="padding:10px 16px">Accepter</button><button type="button" class="btn btn-g" data-c="denied" style="padding:10px 16px">Refuser</button></div>
+</div>
+<script>
+(function(){
+var ID="{{ site.data.site.ga4 }}",bar=document.getElementById('cookie-bar'),k='cookieConsent',v=null;
+try{v=localStorage.getItem(k)}catch(e){}
+function load(){if(window.__ga)return;window.__ga=1;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+ID;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config',ID)}
+if(v==='granted')load();else if(!v)bar.hidden=false;
+bar.addEventListener('click',function(e){var c=e.target.getAttribute&&e.target.getAttribute('data-c');if(!c)return;try{localStorage.setItem(k,c)}catch(x){}bar.hidden=true;if(c==='granted')load()});
+var m=document.getElementById('cookie-manage');if(m)m.addEventListener('click',function(){try{localStorage.removeItem(k)}catch(x){}bar.hidden=false});
+})();
+</script>
+{%- endif -%}

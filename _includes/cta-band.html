@@ -1,0 +1,11 @@
+<section class="sec quote-sec">
+  <div class="wrap two wide-l">
+    <div>
+      <p class="eyebrow" style="color:#9fd36b">Devis gratuit</p>
+      <h2>{{ include.title | default: "Parlons de votre projet" }}</h2>
+      <p>Décrivez-nous votre chantier : nous revenons vers vous rapidement, en général sous 48 h ouvrées, avec un conseil et un devis détaillé.</p>
+      <p>Vous préférez nous appeler ? <a href="tel:{{ site.data.site.phone_e164 }}"><strong>{{ site.data.site.phone }}</strong></a><br>{{ site.data.site.hours_label }}</p>
+    </div>
+    {% include contact-form.html %}
+  </div>
+</section>

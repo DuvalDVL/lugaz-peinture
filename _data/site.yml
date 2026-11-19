@@ -1,0 +1,35 @@
+# Informations de l'entreprise : modifiées ici, elles se mettent à jour partout.
+name: "Lugaz & Fils"
+legal_name: "Lugaz & Fils"          # À MODIFIER : raison sociale exacte (voir A_MODIFIER.md)
+founded: 1995
+phone: "06 03 03 05 36"             # numéro principal (bouton d'appel mobile)
+phone_e164: "+33603030536"
+phone2: "06 95 00 74 71"
+phone2_e164: "+33695007471"
+email: "lugazetfils@gmail.com"
+street: "2785 route de Cruseilles"
+zip: "74350"
+city: "Copponex"
+region: "Haute-Savoie"
+hours_label: "Du lundi au samedi, de 7 h 30 à 18 h 00"
+instagram: "https://www.instagram.com/lugazetfils/"
+
+# Formulaire de contact : identifiant du formulaire Formspree (formspree.io/f/XXXXXXXX)
+formspree: ""                        # À REMPLIR
+
+# Mesure d'audience (activée seulement après consentement, voir A_MODIFIER.md)
+ga4: ""
+google_reviews_url: ""               # lien « Voir nos avis Google » : à remplir
+google_rating: "5,0"
+google_reviews_count: 8
+
+# Zones d'intervention (affichées dans le pied de page et les pages)
+areas:
+  - Annecy
+  - Cruseilles
+  - Annemasse
+  - Saint-Julien-en-Genevois
+  - Genevois français
+  - Pays de Gex
+  - Savoie
+  - Canton de Genève (Suisse)

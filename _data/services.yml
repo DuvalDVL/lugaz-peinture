@@ -1,0 +1,72 @@
+# Liste des prestations : alimente le menu, les cartes, les liens « à voir aussi ».
+# family : interieur | exterieur | pro
+
+- url: /nos-services/peinture-interieure.html
+  name: Peinture intérieure
+  family: interieur
+  short: Préparation soignée, laque tendue et peintures techniques pour des murs, plafonds et boiseries impeccables.
+
+- url: /nos-services/revetements-muraux.html
+  name: Revêtements muraux
+  family: interieur
+  short: Papier peint, fresques, toile de verre et panneaux décoratifs posés avec précision.
+
+- url: /nos-services/chaux-beton-cire-tadelakt.html
+  name: Chaux, béton ciré et tadelakt
+  family: interieur
+  short: Enduits minéraux et décoratifs, respirants et durables, pour les pièces de vie et les salles d'eau.
+
+- url: /nos-services/platrerie-placo.html
+  name: Plâtrerie et placo
+  family: interieur
+  short: Cloisons, doublages, plafonds et enduits : des supports parfaits avant la peinture.
+
+- url: /nos-services/pose-de-sol.html
+  name: Revêtements de sol
+  family: interieur
+  short: Parquet, sols souples, PVC et résines, de la préparation du support à la finition.
+
+- url: /nos-services/ravalement-de-facade.html
+  name: Ravalement de façade
+  family: exterieur
+  short: Nettoyage, réparations, crépis et protection hydrofuge pour une façade saine et durable.
+
+- url: /nos-services/ite-isolation-thermique-exterieure.html
+  name: Isolation par l'extérieur (ITE)
+  family: exterieur
+  short: Plus de confort été comme hiver et des factures allégées, avec PSE, laine de roche ou fibre de bois.
+
+- url: /nos-services/panneaux-facade-parements.html
+  name: Panneaux et parements de façade
+  family: exterieur
+  short: Alucobond, Slate Lite, Orsol : des façades contemporaines à faible entretien.
+
+- url: /nos-services/degrisage-de-facades.html
+  name: Dégrisage et protection du bois
+  family: exterieur
+  short: Bardages, terrasses, volets et chalets : retrouver un bois net et le protéger dans la durée.
+
+- url: /nos-services/aerogommage.html
+  name: Aérogommage
+  family: exterieur
+  short: Décapage doux du bois, du métal et de la pierre, sans agresser le support.
+
+- url: /nos-services/peinture-toiture.html
+  name: Peinture de toiture thermique
+  family: exterieur
+  short: Limiter la chaleur des toitures et prolonger leur durée de vie.
+
+- url: /nos-services/entretien-batiments-professionnels.html
+  name: Entretien pour professionnels
+  family: pro
+  short: Copropriétés, bureaux, commerces et sites industriels : entretien préventif et remises en état.
+
+- url: /nos-services/protection-de-chantier.html
+  name: Protection de chantier
+  family: pro
+  short: Sols, murs et menuiseries protégés jusqu'à la livraison, en prestation indépendante ou coordonnée.
+
+- url: /nos-services/projets-dexception.html
+  name: Projets d'exception
+  family: pro
+  short: Dorure, fresques, tapisseries sur mesure, parquets rares : l'exigence des demeures de prestige.

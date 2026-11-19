@@ -1,0 +1,40 @@
+<footer class="ftr">
+  <div class="wrap">
+    <div>
+      <img src="{{ '/assets/img/logo-lugaz.webp' | relative_url }}" width="150" height="33" alt="Lugaz &amp; Fils" loading="lazy">
+      <p style="margin-top:14px">Artisan peintre en bâtiment depuis {{ site.data.site.founded }}. Peinture, façades, plâtrerie et revêtements en Haute-Savoie, en Savoie et dans le canton de Genève.</p>
+      <p><a href="{{ site.data.site.instagram }}" rel="noopener" target="_blank">Instagram @lugazetfils</a></p>
+    </div>
+    <div>
+      <h3>Nous contacter</h3>
+      <ul>
+        <li>{{ site.data.site.street }}<br>{{ site.data.site.zip }} {{ site.data.site.city }}</li>
+        <li><a href="tel:{{ site.data.site.phone_e164 }}">{{ site.data.site.phone }}</a></li>
+        <li><a href="tel:{{ site.data.site.phone2_e164 }}">{{ site.data.site.phone2 }}</a></li>
+        <li><a href="mailto:{{ site.data.site.email }}">{{ site.data.site.email }}</a></li>
+        <li>{{ site.data.site.hours_label }}</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Prestations</h3>
+      <ul>
+        {%- for s in site.data.services limit: 7 %}<li><a href="{{ s.url | relative_url }}">{{ s.name }}</a></li>{% endfor %}
+        <li><a href="{{ '/nos-services.html' | relative_url }}">Toutes nos prestations</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Zone d'intervention</h3>
+      <ul>
+        {%- for a in site.data.site.areas %}<li>{{ a }}</li>{% endfor %}
+      </ul>
+    </div>
+    <div class="legal" style="grid-column:1/-1">
+      <span>© {{ 'now' | date: '%Y' }} {{ site.data.site.name }}</span>
+      <span><a href="{{ '/mentions-legales.html' | relative_url }}">Mentions légales</a> · <a href="{{ '/politique-de-confidentialite.html' | relative_url }}">Confidentialité</a> · <a href="{{ '/le-blog.html' | relative_url }}">Blog</a> · <button type="button" id="cookie-manage" style="background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;cursor:pointer">Gérer les cookies</button></span>
+    </div>
+  </div>
+</footer>
+<div class="sticky">
+  <a class="btn btn-g" href="tel:{{ site.data.site.phone_e164 }}">Appeler</a>
+  <a class="btn btn-p" href="{{ '/nous-contacter.html' | relative_url }}">Devis gratuit</a>
+</div>

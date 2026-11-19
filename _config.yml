@@ -1,0 +1,34 @@
+# Lugaz & Fils : site Jekyll (GitHub Pages via GitHub Actions)
+
+title: Lugaz & Fils
+description: Artisan peintre à Copponex (Haute-Savoie) depuis 1995 : peinture, ravalement de façade, ITE, bois et sols.
+lang: fr
+
+# URL du site. Pendant la préproduction : l'adresse de prévisualisation.
+# À la mise en ligne : "https://lugaz-peinture.fr"
+url: "https://lugaz-preview.duvaldvl.com"
+baseurl: ""
+
+# false = le site est invisible pour Google (noindex + robots.txt Disallow).
+# Passer à true UNIQUEMENT le jour de la mise en ligne.
+indexable: false
+
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - A_MODIFIER.md
+  - tools
+  - node_modules
+  - assets/img/originals
+  - vendor

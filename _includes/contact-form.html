@@ -1,0 +1,23 @@
+<form class="form" id="quote-form" method="post" action="https://formspree.io/f/{{ site.data.site.formspree }}" novalidate>
+  <div class="row">
+    <div><label for="f-nom">Nom et prénom</label><input id="f-nom" name="nom" autocomplete="name" required></div>
+    <div><label for="f-tel">Téléphone</label><input id="f-tel" name="telephone" type="tel" autocomplete="tel" required></div>
+  </div>
+  <div class="row">
+    <div><label for="f-mail">E-mail</label><input id="f-mail" name="email" type="email" autocomplete="email" required></div>
+    <div><label for="f-commune">Commune du chantier</label><input id="f-commune" name="commune" autocomplete="address-level2" required></div>
+  </div>
+  <div>
+    <label for="f-type">Type de projet</label>
+    <select id="f-type" name="projet">
+      <option>Peinture intérieure</option><option>Plâtrerie / placo</option><option>Revêtements de sol ou muraux</option>
+      <option>Façade / ravalement / ITE</option><option>Bois extérieur (dégrisage, lasure)</option><option>Professionnel / copropriété</option><option>Autre</option>
+    </select>
+  </div>
+  <div><label for="f-msg">Votre projet</label><textarea id="f-msg" name="message" placeholder="Surface approximative, état actuel, délais souhaités…" required></textarea></div>
+  <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <label class="chk"><input type="checkbox" name="rgpd" required> <span>J'accepte que mes informations soient utilisées pour répondre à ma demande (voir la <a href="{{ '/politique-de-confidentialite.html' | relative_url }}">politique de confidentialité</a>).</span></label>
+  <button class="btn btn-p" type="submit">Envoyer ma demande</button>
+  <p id="form-err" role="alert" hidden style="margin:0;color:#a61b1b">L'envoi a échoué. Appelez-nous au {{ site.data.site.phone }} ou écrivez à {{ site.data.site.email }}.</p>
+</form>
+<div class="form-msg" id="form-ok" role="status" hidden><h3>Merci, votre demande est bien partie.</h3><p>Nous vous recontactons très vite.</p></div>

@@ -1,0 +1,9 @@
+- key: interieur
+  name: Intérieur et décoration
+  url: /nos-services/peinture-interieure.html
+- key: exterieur
+  name: Façades et extérieur
+  url: /nos-services/ravalement-de-facade.html
+- key: pro
+  name: Professionnels et sur-mesure
+  url: /nos-services/entretien-batiments-professionnels.html
