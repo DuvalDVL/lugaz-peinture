@@ -69,6 +69,12 @@ a:hover{color:var(--ink)}
 .idx .nm{font:500 1.45rem/1.2 var(--sf);letter-spacing:-.01em}
 .idx .ds{color:var(--muted);font-size:.93rem;max-width:40em}
 .idx a.row:hover .nm{color:var(--green)}
+.cols3{display:grid;gap:40px}
+.cols3 h2{font-size:1.65rem;border-top:2px solid var(--ink);padding-top:18px;margin-bottom:12px}
+.cols3 h2 a{color:var(--ink);text-decoration:none}
+.cols3 ul{list-style:none;margin:0;padding:0}
+.cols3 li a{display:block;padding:10px 0;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none;font-weight:500;font-size:.96rem}
+.cols3 li a:hover,.cols3 h2 a:hover{color:var(--green)}
 .fam-block{padding:40px 0;border-top:1px solid var(--ink)}
 .fam-block:first-of-type{border-top:0;padding-top:0}
 .defs{margin:0}
@@ -140,8 +146,8 @@ body{padding-bottom:0}
 .nav>ul>li>a:hover{color:var(--green)}
 .nav .btn{margin:0 0 0 12px;width:auto;padding:13px 20px;font-size:.84rem}
 .nav .btn:hover{color:#fff}
-.has-sub{position:relative}
-.nav .sub{display:none;position:absolute;right:-120px;top:100%;width:min(860px,92vw);background:#fff;border:1px solid var(--line);border-top:2px solid var(--ink);padding:24px 28px;grid-template-columns:repeat(3,1fr);gap:26px}
+.has-sub>a{padding-block:26px!important}
+.nav .sub{display:none;position:absolute;right:0;top:100%;width:min(860px,100%);z-index:50;background:#fff;border:1px solid var(--line);border-top:2px solid var(--ink);padding:24px 28px;grid-template-columns:repeat(3,1fr);gap:26px}
 .has-sub:hover .sub,.has-sub:focus-within .sub{display:grid}
 .nav .sub a{padding:6px 0}
 .hero{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);min-height:600px}
@@ -152,6 +158,8 @@ body{padding-bottom:0}
 .hero.light .hero-t{padding-top:56px;padding-bottom:56px}
 .sec{padding:96px 0}
 .split{grid-template-columns:5fr 7fr;gap:72px}
+.cols3{grid-template-columns:repeat(3,1fr);gap:56px}
+.hdr .wrap{position:relative}
 .idx a.row{grid-template-columns:5fr 7fr;gap:30px;align-items:baseline}
 .layout{grid-template-columns:minmax(0,1fr) 340px;gap:80px}
 .aside{position:sticky;top:24px}
