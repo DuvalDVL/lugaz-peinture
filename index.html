@@ -15,17 +15,15 @@ description: "Lugaz & Fils, entreprise de peinture en Haute-Savoie depuis 1995 :
 </section>
 
 <section class="sec">
-  <div class="wrap">
+  <div class="wrap cols3">
     {%- for f in site.data.families %}
-    <div class="fam-block split">
-      <div>
-        <h2><a href="{{ f.url | relative_url }}" style="color:inherit;text-decoration:none">{{ f.name }}</a></h2>
-      </div>
-      <div class="idx">
+    <div>
+      <h2><a href="{{ f.url | relative_url }}">{{ f.name }}</a></h2>
+      <ul>
         {%- for s in site.data.services %}{% if s.family == f.key %}
-        <a class="row" href="{{ s.url | relative_url }}"><span class="nm">{{ s.name }}</span><span class="ds">{{ s.short }}</span></a>
+        <li><a href="{{ s.url | relative_url }}">{{ s.name }}</a></li>
         {%- endif %}{% endfor %}
-      </div>
+      </ul>
     </div>
     {%- endfor %}
   </div>
@@ -35,11 +33,10 @@ description: "Lugaz & Fils, entreprise de peinture en Haute-Savoie depuis 1995 :
   <div class="wrap split">
     <h2>Un chantier, de la visite à la réception</h2>
     <dl class="defs">
-      <div><dt>Visite et conseil</dt><dd>Nous visitons le site, relevons les supports et vous orientons vers les produits et finitions adaptés à l'usage et à l'exposition.</dd></div>
-      <div><dt>Devis détaillé</dt><dd>Surfaces, produits, préparation et délais sont chiffrés ligne par ligne. Le devis est gratuit et remis en général sous une semaine.</dd></div>
-      <div><dt>Préparation et protection</dt><dd>Sols, menuiseries et mobilier sont protégés avant toute intervention. La préparation des supports représente l'essentiel du temps de chantier.</dd></div>
-      <div><dt>Exécution</dt><dd>Une équipe constituée, un interlocuteur unique et un planning communiqué à l'avance.</dd></div>
-      <div><dt>Réception</dt><dd>Nous parcourons les travaux avec vous et reprenons chaque retouche avant la clôture du chantier.</dd></div>
+      <div><dt>Visite et conseil</dt><dd>Relevé des supports, choix des produits et des finitions.</dd></div>
+      <div><dt>Devis détaillé</dt><dd>Gratuit, chiffré ligne par ligne, remis en général sous une semaine.</dd></div>
+      <div><dt>Chantier</dt><dd>Protection des lieux, préparation rigoureuse, un interlocuteur unique.</dd></div>
+      <div><dt>Réception</dt><dd>Revue des travaux avec vous et reprise de chaque retouche.</dd></div>
     </dl>
   </div>
 </section>
@@ -50,20 +47,11 @@ description: "Lugaz & Fils, entreprise de peinture en Haute-Savoie depuis 1995 :
     <div>
       <h2>Une entreprise familiale, des équipes structurées</h2>
       <p>Fondée en {{ site.data.site.founded }} par Denis Lugaz, rejointe par Maxime en 2017 et reprise en association en 2023, l'entreprise réunit plus de dix collaborateurs en saison. Elle intervient chez les particuliers comme chez les professionnels, du rafraîchissement d'un appartement au ravalement complet d'un immeuble.</p>
-      <p>Qualifiée Qualibat RGE, elle réalise les travaux d'isolation par l'extérieur éligibles aux aides à la rénovation énergétique.</p>
-      <div class="btns"><a class="btn btn-g" href="{{ '/qui-sommes-nous.html' | relative_url }}">Qui sommes-nous</a><a class="btn btn-g" href="{{ '/qui-sommes-nous/realisations.html' | relative_url }}">Nos réalisations</a></div>
-    </div>
-  </div>
-</section>
-
-<section class="sec alt">
-  <div class="wrap split">
-    <h2>Zone d'intervention</h2>
-    <div>
-      <p>Nous intervenons autour de Copponex : {{ site.data.site.areas | join: ", " }}. Pour un chantier plus éloigné, contactez-nous : nous étudions chaque demande.</p>
+      <p>Qualifiée Qualibat RGE, elle réalise les travaux d'isolation par l'extérieur éligibles aux aides à la rénovation énergétique. Zone d'intervention : {{ site.data.site.areas | join: ", " }}.</p>
       <div class="facts">
         <p><span class="kicker">Lugaz &amp; Fils en bref :</span> entreprise de peinture en bâtiment fondée en {{ site.data.site.founded }}, basée au {{ site.data.site.street }}, {{ site.data.site.zip }} {{ site.data.site.city }} ({{ site.data.site.region }}). Peinture intérieure et extérieure, plâtrerie, revêtements de sol et muraux, ravalement et isolation de façades. Ouvert du lundi au samedi, de 7 h 30 à 18 h 00. Devis gratuit.</p>
       </div>
+      <div class="btns"><a class="btn btn-g" href="{{ '/qui-sommes-nous.html' | relative_url }}">Qui sommes-nous</a><a class="btn btn-g" href="{{ '/qui-sommes-nous/realisations.html' | relative_url }}">Nos réalisations</a></div>
     </div>
   </div>
 </section>
